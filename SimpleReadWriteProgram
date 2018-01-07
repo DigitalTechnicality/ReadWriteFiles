@@ -1,0 +1,9 @@
+import xlrd
+wb = xlrd.open_workbook('Workbook1.xlsx')
+sh = wb.sheet_by_index(0)
+y = sh.cell(0,0).value
+print(y)
+z = str(y)
+filename = 'programming.txt'
+with open(filename, 'w') as file_object:
+    file_object.write(z)
